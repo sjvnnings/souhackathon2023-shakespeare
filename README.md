@@ -1,1 +1,1 @@
-# souhackathon2023
+# Southern Oregon University Hackathon 2023
