@@ -61,16 +61,16 @@ If you do not yet have a GitHub account you can register for one [here](https://
 
 ## Getting Started
 
-Navigate to the Hackathon GitHub project at https://github.com/platt-sam/souhackathon2023
-Click on the "Fork" button at the top of the page and create your own fork of the project.
-Create a new folder on your computer and clone your fork of the project into that folder:
-git clone https://github.com/<your_account_name>/souhackathon2023.git
+Navigate to the Hackathon GitHub project at https://github.com/platt-sam/souhackathon2023 <br/>
+Click on the "Fork" button at the top of the page and create your own fork of the project.<br />
+<div> Create a new folder on your computer and clone your fork of the project into that folder:
+  git clone https://github.com/&lt;your_account_name&gt;/souhackathon2023.git </div> 
 Import the project into your favorite IDE and start getting creative with your code!
 
 ### github tutorials 
-General github command guide: https://github.com/git-guides
-Cloning your repo: https://github.com/git-guides/git-clone
-Some common github mistakes and how to fix them: https://dangitgit.com/en
+* General github command guide: https://github.com/git-guides
+* Cloning your repo: https://github.com/git-guides/git-clone
+* Some common github mistakes and how to fix them: https://dangitgit.com/en
 
 ### finalizing your submission 
 
