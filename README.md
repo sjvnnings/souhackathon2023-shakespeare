@@ -8,7 +8,7 @@ For information about sponsors and prizes go to the [SOU Hackathon 2023 Website]
 
 ### Group Projects
 
-Group projects ***are*** allowed, but you need to fulfill these requirements:
+Group projects ***are allowed*** as long as your group fulfills these requirements:
 * Everyone in the group needs to be registered for the event.
 * Only one person should submit the repository.
 * You must specify in the README.md file that your project is a group project.
