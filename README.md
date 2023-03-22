@@ -18,15 +18,15 @@ Group projects ***are allowed*** as long as your group fulfills these requiremen
 
 Judging will be done by representatives from our sponsors. Projects will be judged according to [this rubric](https://docs.google.com/document/d/1T6CsYdZl9Kc5io2TSmg2rnNjFCir7HaU24Tms49SGp0/edit?usp=sharing).
 
-## Event Info
-### Date
+### Event Info
+#### Date
 
 Tuesday March 28th, 2023
 
-### Time
+#### Time
 9:30am - 5:30pm (PST)
 
-### Locations
+#### Locations
 Computing Services 206, 480 University Way, Ashland, Oregon, 97520
 
 Zoom (link will be emailed to registered participants on March 27th)
