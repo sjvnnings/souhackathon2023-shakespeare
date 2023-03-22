@@ -13,6 +13,7 @@ Tuesday March 28th, 2023
 * Zoom (link will be emailed to registered participants on March 27th)
 * CS206, 480 University Way, Ashland, Oregon, 97520
 ## Prerequisites
+### A GitHub Account
 ### Be enrolled at one of these colleges
 
 * Southern Oregon University
@@ -21,7 +22,6 @@ Tuesday March 28th, 2023
 * Rogue Community College
 * Southwestern Oregon Community College
 * Umpqua Community College
-
 ### Knowledge of (or willingness to learn) at least one of the following languages
 
 * C
@@ -31,5 +31,3 @@ Tuesday March 28th, 2023
 * Java
 * JavaScript
 * Python
-
-### A GitHub Account
