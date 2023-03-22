@@ -4,7 +4,19 @@ Southern Oregon University Hackathon 2023 is organized and run by the Southern O
 
 This year's theme is ***Shakespeare***.
 
-For more information, (including sponsors and prizes) go to the [SOU Hackathon 2023 Website](https://nimogen.github.io/SOU2023Hackathon).
+For information about sponsors and prizes go to the [SOU Hackathon 2023 Website](https://nimogen.github.io/SOU2023Hackathon).
+
+### Group Projects
+
+Group projects ***are*** allowed, but you need to fulfill these requirements:
+* Everyone in the group needs to be registered for the event.
+* Only one person should submit the repository.
+* You must specify in the README.md file that your project is a group project.
+* Group projects will be judged with more scrutiny than individual projects.
+
+### Information about Judging
+
+Judging will be done by representatives from our sponsors. Projects will be judged according to [this rubric](https://docs.google.com/document/d/1T6CsYdZl9Kc5io2TSmg2rnNjFCir7HaU24Tms49SGp0/edit?usp=sharing).
 
 ## Event Info
 ### Date
