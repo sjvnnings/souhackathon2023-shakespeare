@@ -58,3 +58,11 @@ If you do not yet have a GitHub account you can register for one [here](https://
 ## Rules
 * You cannot start coding before the start of Hackathon.
 * Edits or additions after the deadline will not be considered.
+
+## Getting Started
+
+Navigate to the Hackathon GitHub project at https://github.com/shasta-sou-hackathon/2022_hackathon.
+Click on the "Fork" button at the top of the page and create your own fork of the project.
+Create a new folder on your computer and clone your fork of the project into that folder:
+git clone https://github.com/<your_account_name>/2022_hackathon.git
+Import the project into your favorite IDE and start getting creative with your code!
