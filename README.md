@@ -61,8 +61,8 @@ If you do not yet have a GitHub account you can register for one [here](https://
 
 ## Getting Started
 
-Navigate to the Hackathon GitHub project at https://github.com/shasta-sou-hackathon/2022_hackathon.
+Navigate to the Hackathon GitHub project at https://github.com/platt-sam/souhackathon2023
 Click on the "Fork" button at the top of the page and create your own fork of the project.
 Create a new folder on your computer and clone your fork of the project into that folder:
-git clone https://github.com/<your_account_name>/2022_hackathon.git
+git clone https://github.com/<your_account_name>/souhackathon2023.git
 Import the project into your favorite IDE and start getting creative with your code!
