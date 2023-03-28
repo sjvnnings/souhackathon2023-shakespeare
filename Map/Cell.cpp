@@ -5,7 +5,32 @@
 #include "Cell.h"
 
 using namespace Game::Map;
+using namespace Game::Characters;
 
 Cell::Cell() {
 
-} // end of "Cell" constructor
+}
+
+void Cell::AddCharacter(Character *character) {
+    if(characterCount == MAX_CHARACTERS)
+        return;
+
+    characters[characterCount] = character;
+    characterCount++;
+}
+
+void Cell::RemoveCharacter(Character *character) {
+    bool has_found_character = false;
+
+    for(int i = 0; i < characterCount; i++){
+        Character* c = characters[i];
+
+        if(has_found_character)
+            characters[i - 1] = c;
+
+        if(c == character)
+            has_found_character = true;
+    }
+}
+
+// end of "Cell" constructor

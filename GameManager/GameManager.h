@@ -8,9 +8,11 @@
 #include "../System/System.h"
 #include "../Map/Map.h"
 #include "Command.h"
+#include "../Character/Character.h"
 
 using namespace Game::Systems;
 using namespace Game::Map;
+using namespace Game::Characters;
 
 namespace Game {
     class Command;
@@ -22,6 +24,11 @@ namespace Game {
 
         Game::Map::Map* map;
 
+        Character** characters;
+        int characterCount = 0;
+
+        Item** items;
+        int itemCount = 0;
     protected:
         void ExecuteSimulation();
 

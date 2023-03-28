@@ -4,12 +4,18 @@
 
 #include "Character.h"
 #include <string>
-using namespace Game::Character;
+using namespace Game::Characters;
 
-Character::Character(std::string name) {
+Character::Character(std::string name, Item** initialItems, int initialItemCount) {
     this->name = name;
     energy = 1;
     isDead = false;
+
+    for(int i = 0; i < initialItemCount && i < MAX_ITEMS; i++){
+        items[i] = initialItems[i];
+    }
+
+    itemCount = initialItemCount;
 } // end of "Character" constructor
 
 
