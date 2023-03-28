@@ -69,6 +69,8 @@ namespace Game {
         cout << "What shall you do, O greatest ruler grand?" << endl;
         getline(cin, input);
 
+
+
         //TODO: Actually handle player input.
         string action = input.substr(0, input.find(delimiter));
         Command* command = commandMap[action];
@@ -91,7 +93,6 @@ namespace Game {
 
         while(true) {
             Command *command = UserInput();
-
             if(command != nullptr){
                 command->execute(this);
             }
