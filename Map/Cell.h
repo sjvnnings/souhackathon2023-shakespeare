@@ -7,10 +7,10 @@
 
 namespace Game::Map {
     class Cell {
-        private:
+    private:
 
-        public:
-            Cell();
+    public:
+        Cell();
 
     };
 }

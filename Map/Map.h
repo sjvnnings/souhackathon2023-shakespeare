@@ -9,18 +9,18 @@
 
 namespace Game::Map {
     class Map {
-        private:
-            int x;
-            int y;
-            Cell* map;
+    private:
+        int x;
+        int y;
+        Cell* map;
 
-        public:
-            Map(int x, int y);
-            int GetX();
-            int GetY();
-            void GenerateMap(int x, int y);
-            void DeleteMap();
-            Cell* GetCell(int x, int y);
+    public:
+        Map(int x, int y);
+        int GetX();
+        int GetY();
+        void GenerateMap(int x, int y);
+        void DeleteMap();
+        Cell* GetCell(int x, int y);
     };
 }
 

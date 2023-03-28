@@ -6,7 +6,6 @@
 #include <string>
 using namespace Game::Character;
 
-
 Character::Character(std::string name) {
     this->name = name;
     energy = 1;
