@@ -7,6 +7,7 @@
 
 #include "../System/System.h"
 #include "../Map/Map.h"
+#include "Command.h"
 
 using namespace Game::Systems;
 using namespace Game::Map;
@@ -19,9 +20,16 @@ namespace Game {
         int systemCount = 0;
 
         Game::Map::Map* map;
+
+    protected:
+        void ExecuteSimulation();
+
     public:
         GameManager(int x, int y);
         ~GameManager();
+
+        void Start();
+        Command* UserInput();
     };
 
 } // Game

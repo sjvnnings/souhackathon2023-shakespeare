@@ -9,7 +9,7 @@ namespace Game {
     namespace Systems {
 
         class System {
-            //TODO: Pass map as parameter.
+        public:
             virtual void execute() = 0;
         };
 

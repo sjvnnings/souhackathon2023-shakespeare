@@ -10,6 +10,8 @@ GameManager* game;
 
 int main() {
     game = new GameManager(DEFAULT_MAP_X, DEFAULT_MAP_Y);
-    std::cout << "Hello, World!" << std::endl;
+
+    game->Start();
+
     return 0;
 }
