@@ -78,7 +78,10 @@ namespace Game {
                          "Thou dost live to fight another day\n"
                          "With cunning wit and sword, thy foes dismayed.\n" << std::endl;
         }else{
-
+            std::cout << "We mourn the loss of Julius Caesar's life,\n"
+                         "Slain by his very enemies in strife.\n"
+                         "May Mark Anthony avenge thee with might,\n"
+                         "And bring thy foes to justice with his right.\n" << std::endl;
         }
     }
 
