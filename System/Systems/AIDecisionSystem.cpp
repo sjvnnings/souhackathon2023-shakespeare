@@ -26,7 +26,11 @@ namespace Game {
                         if(abs((targetX - charX) + (targetY - charY)) == 1){
                             //Attack here.
                         }else{
-                            //Move here.
+                            int newX = targetX == charX ? charX : charX + sign(targetX - charX);
+                            int newY = newX != charX ? charY : charY + sign(targetY - charY);
+
+                            cell->RemoveCharacter(character);
+                            map->GetCell(newX, newY)->AddCharacter(character);
                         }
                     }
                 }
