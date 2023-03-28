@@ -14,8 +14,17 @@ void PrintMapCommand::execute(GameManager *gm) {
     for(int row = 0; row < x + 1; row++) {
         for(int column = 0; column < y + 1; column++) {
 
-            if(row >= 0 && column - 1 >= 0 && gm->GetMap()->GetCell(column - 1, row)->characterCount > 0) {
-                std::cout << " C ";
+            Cell* cell = gm->GetMap()->GetCell(column - 1, row);
+            std::string symbol = " C ";
+
+            if(row >= 0 && column - 1 >= 0 && cell->characterCount > 0) {
+                for(int i = 0; i < cell->characterCount; i++){
+                    if(cell->characters[i] == gm->playerCharacter){
+                        symbol = " J ";
+                    }
+                }
+
+                std::cout << symbol;
             }
             else {
                 if(column == 0) {

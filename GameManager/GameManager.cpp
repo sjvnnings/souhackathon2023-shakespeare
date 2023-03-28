@@ -17,9 +17,11 @@ using namespace std;
 using namespace Game;
 using namespace Game::Systems;
 
+PrintMapCommand* mapCmd = new PrintMapCommand;
+
 map<string, Command*> commandMap = {
         {"Help", new HelpCommand},
-        {"Map", new PrintMapCommand},
+        {"Map", mapCmd},
         {"Move", new MoveCommand}
 };
 
@@ -101,13 +103,19 @@ namespace Game {
                 "Yet, in the room's far end, a door invites,\r\n"
                 "Perhaps escape awaits if you survive." << endl;
 
+        mapCmd->execute(this);
+
         while(true) {
             Command *command = UserInput();
+
             if(command != nullptr){
                 command->execute(this);
 
-                if(!command->IsHelper())
+                if(!command->IsHelper()) {
                     ExecuteSimulation();
+                    mapCmd->execute(this);
+                }
+
             }
         }
     }
