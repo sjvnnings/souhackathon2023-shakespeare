@@ -79,5 +79,9 @@ namespace Game {
         }
     }
 
+    Game::Map::Map *GameManager::GetMap() {
+        return map;
+    }
+
 
 } // Game

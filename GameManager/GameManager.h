@@ -31,6 +31,8 @@ namespace Game {
 
         void Start();
         Command* UserInput();
+
+        Game::Map::Map* GetMap();
     };
 
 } // Game

@@ -6,22 +6,30 @@
 #define SOUHACKATHON2023_SHAKESPEARE_CHARACTER_H
 
 #include <string>
+#include "../Items/Item.h"
 
-namespace Game::Character {
+using namespace Game::Items;
+
+namespace Game::Character{
     class Character {
-    private:
-        float energy;
-        std::string name;
-        bool isDead;
+        private:
+            float energy;
+            std::string name;
+            bool isDead;
 
-    public:
-        Character(std::string name);
-        void SetEnergy(float energy);
-        void ModifyEnergy(float addedEnergy);
-        void SetIsDead(bool isDead);
-        std::string GetName();
-        float GetEnergy();
-        bool GetIsDead();
+        public:
+            Item** items;
+
+            Character(std::string name);
+            void SetEnergy(float energy);
+            void ModifyEnergy(float addedEnergy);
+            void SetIsDead(bool isDead);
+            std::string GetName();
+            float GetEnergy();
+            bool GetIsDead();
+
     };
 }
+
+
 #endif //SOUHACKATHON2023_SHAKESPEARE_CHARACTER_H
