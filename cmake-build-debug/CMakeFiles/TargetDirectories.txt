@@ -1,0 +1,3 @@
+C:/Users/sammy/Documents/souhackathon2023-shakespeare/cmake-build-debug/CMakeFiles/souhackathon2023_shakespeare.dir
+C:/Users/sammy/Documents/souhackathon2023-shakespeare/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/sammy/Documents/souhackathon2023-shakespeare/cmake-build-debug/CMakeFiles/rebuild_cache.dir
