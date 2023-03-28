@@ -40,6 +40,8 @@ namespace Game {
 
         characters[1]->target = characters[0];
 
+        playerCharacter = characters[0];
+
         characterCount = 1;
     }
 
