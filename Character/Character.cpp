@@ -18,9 +18,8 @@ void Character::SetEnergy(float energy) {
     if(energy <= 1) {
         this->energy = energy;
     }
-    else if(energy <= 0) {
+    if(energy <= 0) {
         SetIsDead(true);
-        this->energy = energy;
     }
 } // end of "SetHealth" function
 
