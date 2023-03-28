@@ -8,6 +8,8 @@
 #include <string>
 #include "../Items/Item.h"
 
+#define MAX_ITEMS 16
+
 using namespace Game::Items;
 
 namespace Game::Character{
@@ -18,9 +20,10 @@ namespace Game::Character{
             bool isDead;
 
         public:
-            Item** items;
+            Item* items[MAX_ITEMS];
+            int itemCount = 0;
 
-            Character(std::string name);
+            Character(std::string name, Item** initialItems = nullptr, int initialItemCount = 0);
             void SetEnergy(float energy);
             void ModifyEnergy(float addedEnergy);
             void SetIsDead(bool isDead);
