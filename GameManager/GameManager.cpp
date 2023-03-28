@@ -72,10 +72,14 @@ namespace Game {
     }
 
     void GameManager::EndGame(){
-        std::cout << "Hail Julius Caesar, thou hast escaped\n"
-                     "Thine enemies' grasp, take care and stay safe\n"
-                     "Thou dost live to fight another day\n"
-                     "With cunning wit and sword, thy foes dismayed.\n" << std::endl;
+        if(map->isVictory) {
+            std::cout << "Hail Julius Caesar, thou hast escaped\n"
+                         "Thine enemies' grasp, take care and stay safe\n"
+                         "Thou dost live to fight another day\n"
+                         "With cunning wit and sword, thy foes dismayed.\n" << std::endl;
+        }else{
+
+        }
     }
 
     void GameManager::ExecuteSimulation() {

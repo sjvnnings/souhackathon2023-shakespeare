@@ -16,6 +16,7 @@ namespace Game::Map {
 
     public:
         bool isGameOver = false;
+        bool isVictory = false;
 
         Map(int x, int y);
         int GetX();

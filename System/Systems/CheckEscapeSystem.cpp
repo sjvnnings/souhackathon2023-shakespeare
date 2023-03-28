@@ -18,6 +18,7 @@ namespace Game {
                         Character* character = cell->characters[i];
                         if(character->playerControlled && cell->isEscape){
                             map->isGameOver = true;
+                            map->isVictory = true;
                         }
                     }
                 }

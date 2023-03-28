@@ -24,7 +24,8 @@ namespace Game {
                         int charY = character->celly;
 
                         if(abs((targetX - charX) + (targetY - charY)) == 1){
-                            //Attack here.
+                            map->isGameOver = true;
+                            map->isVictory = false;
                         }else{
                             int newX = targetX == charX ? charX : charX + (targetX - charX > 0 ? 1 : -1);
                             int newY = newX != charX ? charY : charY + (targetY - charY > 0 ? 1 : -1);
