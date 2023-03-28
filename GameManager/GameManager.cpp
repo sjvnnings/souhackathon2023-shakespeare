@@ -10,8 +10,9 @@
 #include "../System/Systems/AIDecisionSystem.h"
 #include "PrintMapCommand.h"
 #include "MoveCommand.h"
+#include "../System/Systems/CheckEscapeSystem.h"
 
-#define SYSTEM_COUNT 1
+#define SYSTEM_COUNT 2
 
 using namespace std;
 using namespace Game;
@@ -30,7 +31,8 @@ namespace Game {
         map = new Map::Map(x, y);
 
         systems = new System*[SYSTEM_COUNT]{
-            new AIDecisionSystem()
+            new AIDecisionSystem(),
+            new CheckEscapeSystem()
         };
 
         systemCount = SYSTEM_COUNT;
@@ -43,6 +45,8 @@ namespace Game {
 
         map->GetCell(0,0)->AddCharacter(characters[0]);
         map->GetCell(5, 5)->AddCharacter(characters[1]);
+
+        map->GetCell(0, 1)->isEscape = true;
 
         characters[1]->target = characters[0];
 

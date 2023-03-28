@@ -20,6 +20,8 @@ namespace Game::Map {
         Fluid* fluid = nullptr;
         float fluidAmount = 0.0;
 
+        bool isEscape = false;
+
         Cell();
 
         void AddCharacter(Character* character);

@@ -17,7 +17,9 @@ void PrintMapCommand::execute(GameManager *gm) {
             Cell* cell = gm->GetMap()->GetCell(column - 1, row);
             std::string symbol = " C ";
 
-            if(row >= 0 && column - 1 >= 0 && cell->characterCount > 0) {
+            bool isValidCell = (row >= 0 && column - 1 >= 0);
+
+            if(isValidCell && cell->characterCount > 0) {
                 for(int i = 0; i < cell->characterCount; i++){
                     if(cell->characters[i] == gm->playerCharacter){
                         symbol = " J ";
@@ -25,6 +27,9 @@ void PrintMapCommand::execute(GameManager *gm) {
                 }
 
                 std::cout << symbol;
+            }
+            else if(isValidCell && cell->isEscape){
+                std::cout << " ] ";
             }
             else {
                 if(column == 0) {
