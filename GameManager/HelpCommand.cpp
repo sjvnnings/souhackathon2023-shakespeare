@@ -5,7 +5,7 @@
 #include "HelpCommand.h"
 
 namespace Game {
-    void HelpCommand::execute() {
+    void HelpCommand::execute(Game::GameManager* gm) {
         std::cout << "OK." << std::endl;
     }
 } // Game

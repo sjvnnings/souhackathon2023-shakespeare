@@ -11,7 +11,7 @@ namespace Game {
 
     class HelpCommand : public Command{
     public:
-        void execute() override;
+        void execute(Game::GameManager* gm) override;
     };
 
 } // Game

@@ -74,7 +74,7 @@ namespace Game {
             Command *command = UserInput();
 
             if(command != nullptr){
-                command->execute();
+                command->execute(this);
             }
         }
     }

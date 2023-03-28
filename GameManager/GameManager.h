@@ -13,6 +13,7 @@ using namespace Game::Systems;
 using namespace Game::Map;
 
 namespace Game {
+    class Command;
 
     class GameManager {
     private:

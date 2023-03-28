@@ -4,6 +4,10 @@
 
 #include "Command.h"
 
-void Command::set_params(std::string params) {
-    this->params = params;
+namespace Game {
+
+    void Command::set_params(std::string params) {
+        this->params = params;
+    }
+
 }

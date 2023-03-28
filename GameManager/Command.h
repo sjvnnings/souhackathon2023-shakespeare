@@ -6,13 +6,18 @@
 #define SOUHACKATHON2023_SHAKESPEARE_COMMAND_H
 #include <iostream>
 
-class Command {
-protected:
-    std::string params;
-public:
-    void set_params(std::string params);
-    virtual void execute() = 0;
-};
+#include "GameManager.h"
 
+namespace Game {
+    class GameManager;
+
+    class Command {
+    protected:
+        std::string params;
+    public:
+        void set_params(std::string params);
+        virtual void execute(GameManager *gm) = 0;
+    };
+}
 
 #endif //SOUHACKATHON2023_SHAKESPEARE_COMMAND_H
