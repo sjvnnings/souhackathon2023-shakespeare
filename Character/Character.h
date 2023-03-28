@@ -18,6 +18,7 @@ namespace Game::Characters{
         private:
             float energy;
             std::string name;
+            std::string deathMessage;
             bool isDead;
 
         public:
@@ -32,7 +33,7 @@ namespace Game::Characters{
 
             bool isAttacking = false;
 
-            Character(std::string name, Item** initialItems = nullptr, int initialItemCount = 0);
+            Character(std::string name, std::string deathMessage, Item** initialItems = nullptr, int initialItemCount = 0);
             void SetEnergy(float energy);
             void ModifyEnergy(float addedEnergy);
             void SetIsDead(bool isDead);
@@ -41,6 +42,8 @@ namespace Game::Characters{
             bool GetIsDead();
 
             void SetCellCoords(int x, int y);
+
+        string GetDeathMessage();
     };
 }
 

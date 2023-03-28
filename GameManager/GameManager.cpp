@@ -11,8 +11,10 @@
 #include "PrintMapCommand.h"
 #include "MoveCommand.h"
 #include "../System/Systems/CheckEscapeSystem.h"
+#include "../System/Systems/AttackSystem.h"
+#include "AttackCommand.h"
 
-#define SYSTEM_COUNT 2
+#define SYSTEM_COUNT 3
 
 using namespace std;
 using namespace Game;
@@ -23,7 +25,13 @@ PrintMapCommand* mapCmd = new PrintMapCommand;
 map<string, Command*> commandMap = {
         {"Help", new HelpCommand},
         {"Map", mapCmd},
-        {"Move", new MoveCommand}
+        {"Move", new MoveCommand},
+        {"Attack", new AttackCommand}
+};
+
+Character* characters[5] = {
+    new Character("Marcus Brutus", "Brutus, Marcus, met his tragic demise."),
+
 };
 
 namespace Game {
@@ -31,6 +39,7 @@ namespace Game {
         map = new Map::Map(x, y);
 
         systems = new System*[SYSTEM_COUNT]{
+            new AttackSystem(),
             new AIDecisionSystem(),
             new CheckEscapeSystem()
         };
@@ -38,15 +47,15 @@ namespace Game {
         systemCount = SYSTEM_COUNT;
 
         characters = new Character*[MAX_CHARACTERS]{
-            new Character("Julius Caesar"),
-            new Character("Brutus")
+            new Character("Julius Caesar", ""),
+            new Character("Brutus", "")
         };
         characters[0]->playerControlled = true;
 
         map->GetCell(0,0)->AddCharacter(characters[0]);
-        map->GetCell(5, 5)->AddCharacter(characters[1]);
+        map->GetCell(0, 2)->AddCharacter(characters[1]);
 
-        map->GetCell(0, 1)->isEscape = true;
+        map->GetCell(0, 6)->isEscape = true;
 
         characters[1]->target = characters[0];
 

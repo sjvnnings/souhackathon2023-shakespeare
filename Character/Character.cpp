@@ -6,8 +6,9 @@
 #include <string>
 using namespace Game::Characters;
 
-Character::Character(std::string name, Item** initialItems, int initialItemCount) {
+Character::Character(std::string name, std::string deathMessage, Item** initialItems, int initialItemCount) {
     this->name = name;
+    this->deathMessage = deathMessage;
     energy = 1;
     isDead = false;
 
@@ -46,6 +47,9 @@ std::string Character::GetName() {
     return name;
 } // end of "GetName" function
 
+std::string Character::GetDeathMessage() {
+    return deathMessage;
+} // end of "GetName" function
 
 float Character::GetEnergy() {
     return energy;
