@@ -14,10 +14,20 @@ namespace Game {
                     Cell* cell = map->GetCell(x, y);
                     for(int i = 0; i < cell->characterCount; i++){
                         Character* character = cell->characters[i];
-                        if(character->playerControlled)
+                        if(character->playerControlled || character->target == nullptr)
                             continue;
 
+                        int targetX = character->target->cellx;
+                        int targetY = character->target->celly;
 
+                        int charX = character->cellx;
+                        int charY = character->celly;
+
+                        if(abs((targetX - charX) + (targetY - charY)) == 1){
+                            //Attack here.
+                        }else{
+                            //Move here.
+                        }
                     }
                 }
             }

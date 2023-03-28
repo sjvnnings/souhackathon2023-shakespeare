@@ -15,6 +15,8 @@ void Cell::AddCharacter(Character *character) {
     if(characterCount == MAX_CHARACTERS)
         return;
 
+    character->SetCellCoords(x, y);
+
     characters[characterCount] = character;
     characterCount++;
 }
@@ -31,6 +33,11 @@ void Cell::RemoveCharacter(Character *character) {
         if(c == character)
             has_found_character = true;
     }
+}
+
+void Cell::SetCoords(int x, int y) {
+    this->x = x;
+    this->y = y;
 }
 
 // end of "Cell" constructor

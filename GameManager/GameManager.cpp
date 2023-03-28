@@ -28,9 +28,13 @@ namespace Game {
         systemCount = SYSTEM_COUNT;
 
         characters = new Character*[MAX_CHARACTERS]{
-            new Character("Julius Caesar")
+            new Character("Julius Caesar"),
+            new Character("Brutus")
         };
         characters[0]->playerControlled = true;
+
+        map->GetCell(0,0)->AddCharacter(characters[0]);
+        map->GetCell(5, 5)->AddCharacter(characters[1]);
 
         characterCount = 1;
     }

@@ -21,8 +21,12 @@ namespace Game::Characters{
             bool isDead;
 
         public:
+            int cellx, celly = 0;
+
             Item* items[MAX_ITEMS];
             int itemCount = 0;
+
+            Character* target;
 
             bool playerControlled = false;
 
@@ -34,6 +38,7 @@ namespace Game::Characters{
             float GetEnergy();
             bool GetIsDead();
 
+            void SetCellCoords(int x, int y);
     };
 }
 

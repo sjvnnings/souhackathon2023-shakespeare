@@ -12,7 +12,7 @@ using namespace Game::Characters;
 namespace Game::Map {
     class Cell {
     private:
-
+        int x, y = 0;
     public:
         Character* characters[MAX_CHARACTERS];
         int characterCount = 0;
@@ -24,6 +24,8 @@ namespace Game::Map {
 
         void AddCharacter(Character* character);
         void RemoveCharacter(Character* character);
+
+        void SetCoords(int x, int y);
     };
 }
 

@@ -54,6 +54,12 @@ float Character::GetEnergy() {
 
 bool Character::GetIsDead() {
     return isDead;
-} // end of "GetIsDead" function
+}
+
+void Character::SetCellCoords(int x, int y) {
+    cellx = x;
+    celly = y;
+}
+// end of "GetIsDead" function
 
 
