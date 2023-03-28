@@ -31,7 +31,10 @@ map<string, Command*> commandMap = {
 
 Character* characters[5] = {
     new Character("Marcus Brutus", "Brutus, Marcus, met his tragic demise."),
-
+        new Character("Gaius Cassius Longinus", "Longinus Cassius met his fateful end."),
+        new Character("Servilius Casca", "Casca Servilius met his mortal end."),
+        new Character("Tillius Cimber", "Cimber Tillius met his final fate."),
+        new Character("Trebonius", "Trebonius, alas, met his fatal end.")
 };
 
 namespace Game {
