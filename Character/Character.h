@@ -30,6 +30,8 @@ namespace Game::Characters{
 
             bool playerControlled = false;
 
+            bool isAttacking = false;
+
             Character(std::string name, Item** initialItems = nullptr, int initialItemCount = 0);
             void SetEnergy(float energy);
             void ModifyEnergy(float addedEnergy);
