@@ -58,6 +58,7 @@ If you do not yet have a GitHub account you can register for one [here](https://
 ## Rules
 * You cannot start coding before the start of Hackathon.
 * Edits or additions after the deadline will not be considered.
+* Code must be in your `main` branch in order to be considered. No code from other branches will be considered.
 
 ## Getting Started
 
