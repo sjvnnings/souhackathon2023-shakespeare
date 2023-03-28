@@ -33,6 +33,8 @@ namespace Game {
         void ExecuteSimulation();
 
     public:
+        Character* playerCharacter;
+
         GameManager(int x, int y);
         ~GameManager();
 
