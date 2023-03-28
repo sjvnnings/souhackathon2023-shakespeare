@@ -2,6 +2,7 @@
 // Created by sammy on 3/28/2023.
 //
 
+#include <iostream>
 #include "AttackSystem.h"
 #include "../../Map/Cell.h"
 
@@ -24,7 +25,7 @@ namespace Game {
 
                                     for(int i2 = 0; i2 < adjacentCell->characterCount; i2++){
                                         adjacentCell->characters[i2]->SetIsDead(true);
-                                        //TODO: Print name of fell character.
+                                        std::cout << adjacentCell->characters[i2]->GetDeathMessage() << std::endl;
                                     }
                                 }
                             }
