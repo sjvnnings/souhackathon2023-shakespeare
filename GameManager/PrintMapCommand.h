@@ -11,6 +11,7 @@ namespace Game {
     class PrintMapCommand: public Command{
     public:
         void execute(GameManager *gm) override;
+        bool IsHelper() override{ return true; }
     };
 }
 
