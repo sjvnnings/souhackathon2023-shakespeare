@@ -26,8 +26,8 @@ namespace Game {
                         if(abs((targetX - charX) + (targetY - charY)) == 1){
                             //Attack here.
                         }else{
-                            int newX = targetX == charX ? charX : charX + sign(targetX - charX);
-                            int newY = newX != charX ? charY : charY + sign(targetY - charY);
+                            int newX = targetX == charX ? charX : charX + (targetX - charX > 0 ? 1 : -1);
+                            int newY = newX != charX ? charY : charY + (targetY - charY > 0 ? 1 : -1);
 
                             cell->RemoveCharacter(character);
                             map->GetCell(newX, newY)->AddCharacter(character);

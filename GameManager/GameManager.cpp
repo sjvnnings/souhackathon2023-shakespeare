@@ -7,11 +7,13 @@
 #include "GameManager.h"
 
 #include "HelpCommand.h"
+#include "../System/Systems/AIDecisionSystem.h"
 
-#define SYSTEM_COUNT 0
+#define SYSTEM_COUNT 1
 
 using namespace std;
 using namespace Game;
+using namespace Game::Systems;
 
 map<string, Command*> commandMap = {
         {"Help", new HelpCommand}
@@ -22,7 +24,7 @@ namespace Game {
         map = new Map::Map(x, y);
 
         systems = new System*[SYSTEM_COUNT]{
-
+            new AIDecisionSystem()
         };
 
         systemCount = SYSTEM_COUNT;
@@ -35,6 +37,8 @@ namespace Game {
 
         map->GetCell(0,0)->AddCharacter(characters[0]);
         map->GetCell(5, 5)->AddCharacter(characters[1]);
+
+        characters[1]->target = characters[0];
 
         characterCount = 1;
     }
@@ -94,6 +98,7 @@ namespace Game {
 
             if(command != nullptr){
                 command->execute(this);
+                ExecuteSimulation();
             }
         }
     }
