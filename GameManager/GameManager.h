@@ -6,19 +6,22 @@
 #define SOUHACKATHON2023_SHAKESPEARE_GAMEMANAGER_H
 
 #include "../System/System.h"
+#include "../Map/Map.h"
 
 using namespace Game::Systems;
+using namespace Game::Map;
 
 namespace Game {
 
     class GameManager {
     private:
-        System* systems = nullptr;
+        System** systems = nullptr;
         int systemCount = 0;
 
-        //TODO: Add map reference
+        Game::Map::Map* map;
     public:
-        GameManager();
+        GameManager(int x, int y);
+        ~GameManager();
     };
 
 } // Game
