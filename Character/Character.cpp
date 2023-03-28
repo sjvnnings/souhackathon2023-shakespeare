@@ -4,7 +4,7 @@
 
 #include "Character.h"
 #include <string>
-using namespace Game::Character;
+using namespace Game::Characters;
 
 Character::Character(std::string name, Item** initialItems, int initialItemCount) {
     this->name = name;

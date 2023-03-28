@@ -26,6 +26,13 @@ namespace Game {
         };
 
         systemCount = SYSTEM_COUNT;
+
+        characters = new Character*[MAX_CHARACTERS]{
+            new Character("Julius Caesar")
+        };
+        characters[0]->playerControlled = true;
+
+        characterCount = 1;
     }
 
     GameManager::~GameManager() {
@@ -34,6 +41,14 @@ namespace Game {
         for(int i = 0; i < systemCount; i++)
             delete systems[i];
         delete[] systems;
+
+        for(int i = 0; i < characterCount; i++)
+            delete characters[i];
+        delete[] characters;
+
+        for(int i = 0; i < itemCount; i++)
+            delete items[i];
+        delete[] items;
     }
 
     void GameManager::ExecuteSimulation() {
