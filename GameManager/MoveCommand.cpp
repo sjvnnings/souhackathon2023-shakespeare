@@ -12,8 +12,8 @@ namespace Game {
         std::cout << "Moving" << std::endl;
         std::string x = params.substr(0, params.find(delimiter));
         std::string y = params.substr(params.find(delimiter) + 1, params.length() - 1);
-        int xInt = std::stoi(x);
-        int yInt = std::stoi(y);
+        int xInt = std::stoi(x) - 1;
+        int yInt = std::stoi(y) - 1;
         bool adjacentCell = false;
 
         if(abs((xInt - gm->playerCharacter->cellx) + (yInt - gm->playerCharacter->celly)) == 1){

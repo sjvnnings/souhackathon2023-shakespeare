@@ -12,6 +12,7 @@ namespace Game {
     class MoveCommand: public Command {
     public:
         void execute(Game::GameManager* gm) override;
+        bool IsHelper(){ return false; }
     };
 
 } // Game

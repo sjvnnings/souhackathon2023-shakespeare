@@ -9,6 +9,7 @@
 #include "HelpCommand.h"
 #include "../System/Systems/AIDecisionSystem.h"
 #include "PrintMapCommand.h"
+#include "MoveCommand.h"
 
 #define SYSTEM_COUNT 1
 
@@ -18,7 +19,8 @@ using namespace Game::Systems;
 
 map<string, Command*> commandMap = {
         {"Help", new HelpCommand},
-        {"Map", new PrintMapCommand}
+        {"Map", new PrintMapCommand},
+        {"Move", new MoveCommand}
 };
 
 namespace Game {
