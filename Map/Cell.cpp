@@ -3,3 +3,9 @@
 //
 
 #include "Cell.h"
+
+using namespace Game::Map;
+
+Cell::Cell() {
+
+} // end of "Cell" constructor

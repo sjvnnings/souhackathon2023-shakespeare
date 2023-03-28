@@ -29,13 +29,19 @@ void Map::GenerateMap(int x, int y) {
 } // end of "GenerateMap" function
 
 
-void Map::DeleteMap() {
+void Map::DeleteMap() { // this function deletes the map array including Cell objects
     delete[] map;
 } // end of "DeleteMap" function
 
 
 Cell* Map::GetCell(int x, int y) {
-    return &(map[this->x * y + x]);
+    // ensuring that the user is within the bounds of the array. if not in bounds, return nullptr. Else, return the Cell pointer object
+    if(x > this->x || y > this->y || x < 0 || y < 0) {
+        return nullptr;
+    }
+    else {
+        return &(map[this->x * y + x]);
+    }
 } // end of "GetCell" function
 
 
