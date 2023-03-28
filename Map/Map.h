@@ -15,6 +15,8 @@ namespace Game::Map {
         Cell* map;
 
     public:
+        bool isGameOver = false;
+
         Map(int x, int y);
         int GetX();
         int GetY();

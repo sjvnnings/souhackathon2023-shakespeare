@@ -42,6 +42,8 @@ namespace Game {
         Command* UserInput();
 
         Game::Map::Map* GetMap();
+
+        void EndGame();
     };
 
 } // Game

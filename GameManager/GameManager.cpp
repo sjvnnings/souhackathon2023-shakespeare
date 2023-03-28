@@ -71,9 +71,17 @@ namespace Game {
         delete[] items;
     }
 
+    void GameManager::EndGame(){
+        std::cout << "Victory!" << std::endl;
+    }
+
     void GameManager::ExecuteSimulation() {
         for(int i = 0; i < systemCount; i++){
             systems[i]->execute(map);
+            if(map->isGameOver){
+                EndGame();
+                return;
+            }
         }
     }
 
@@ -107,9 +115,13 @@ namespace Game {
                 "Yet, in the room's far end, a door invites,\r\n"
                 "Perhaps escape awaits if you survive." << endl;
 
-        mapCmd->execute(this);
+        bool newTurn = true;
 
-        while(true) {
+        while(!map->isGameOver) {
+            if(newTurn)
+                mapCmd->execute(this);
+            newTurn = false;
+
             Command *command = UserInput();
 
             if(command != nullptr){
@@ -117,7 +129,7 @@ namespace Game {
 
                 if(!command->IsHelper()) {
                     ExecuteSimulation();
-                    mapCmd->execute(this);
+                    newTurn = true;
                 }
 
             }

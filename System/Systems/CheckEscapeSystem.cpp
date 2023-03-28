@@ -17,7 +17,7 @@ namespace Game {
                     for(int i = 0; i < cell->characterCount; i++){
                         Character* character = cell->characters[i];
                         if(character->playerControlled && cell->isEscape){
-                            std::cout << "Victory!" << std::endl;
+                            map->isGameOver = true;
                         }
                     }
                 }
