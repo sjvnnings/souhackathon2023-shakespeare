@@ -5,10 +5,16 @@
 #ifndef SOUHACKATHON2023_SHAKESPEARE_ATTACKCOMMAND_H
 #define SOUHACKATHON2023_SHAKESPEARE_ATTACKCOMMAND_H
 
+#include "Command.h"
 
-class AttackCommand {
+namespace Game {
+    class AttackCommand : public Command {
+    public:
+        void execute(Game::GameManager* gm) override;
+        bool IsHelper() { return false; }
+    };
+} // Game
 
-};
 
 
 #endif //SOUHACKATHON2023_SHAKESPEARE_ATTACKCOMMAND_H

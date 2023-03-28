@@ -3,3 +3,10 @@
 //
 
 #include "AttackCommand.h"
+
+namespace Game {
+    void Game::AttackCommand::execute(Game::GameManager *gm) {
+        gm->playerCharacter->isAttacking = true;
+    } // end of "execute" function
+} // Game
+
