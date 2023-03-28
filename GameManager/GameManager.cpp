@@ -7,8 +7,8 @@
 #include "GameManager.h"
 
 #include "HelpCommand.h"
-#include "MoveCommand.h"
 #include "../System/Systems/AIDecisionSystem.h"
+#include "PrintMapCommand.h"
 
 #define SYSTEM_COUNT 1
 
@@ -18,7 +18,7 @@ using namespace Game::Systems;
 
 map<string, Command*> commandMap = {
         {"Help", new HelpCommand},
-        {"Move", new MoveCommand}
+        {"Map", new PrintMapCommand}
 };
 
 namespace Game {
@@ -103,7 +103,9 @@ namespace Game {
             Command *command = UserInput();
             if(command != nullptr){
                 command->execute(this);
-                ExecuteSimulation();
+
+                if(!command->IsHelper())
+                    ExecuteSimulation();
             }
         }
     }

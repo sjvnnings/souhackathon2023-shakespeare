@@ -33,6 +33,9 @@ void Cell::RemoveCharacter(Character *character) {
         if(c == character)
             has_found_character = true;
     }
+
+    if(has_found_character)
+        characterCount--;
 }
 
 void Cell::SetCoords(int x, int y) {

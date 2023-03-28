@@ -17,6 +17,7 @@ namespace Game {
     public:
         void set_params(std::string params);
         virtual void execute(GameManager *gm) = 0;
+        virtual bool IsHelper() = 0;
     };
 }
 
