@@ -24,6 +24,9 @@ void PrintMapCommand::execute(GameManager *gm) {
                     if(cell->characters[i] == gm->playerCharacter){
                         symbol = " J ";
                     }
+                    else if(cell->characters[i]->GetIsDead()){
+                        symbol = " . ";
+                    }
                 }
 
                 std::cout << symbol;

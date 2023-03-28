@@ -25,7 +25,14 @@ namespace Game {
                 std::cout << invalidMoveMessage;
             }
 
-            if(adjacentCell == true && gm->GetMap()->GetCell(xInt, yInt)->characterCount == 0){
+            Cell* cell = gm->GetMap()->GetCell(xInt, yInt);
+            bool isValidMoveCell = true;
+
+            for(int i = 0; i < cell->characterCount; i++){
+                isValidMoveCell = isValidMoveCell && cell->characters[i]->GetIsDead();
+            }
+
+            if(adjacentCell == true && isValidMoveCell){
                 gm->GetMap()->GetCell(gm->playerCharacter->cellx, gm->playerCharacter->celly)->RemoveCharacter(gm->playerCharacter);
                 gm->GetMap()->GetCell(xInt, yInt)->AddCharacter(gm->playerCharacter);
             }

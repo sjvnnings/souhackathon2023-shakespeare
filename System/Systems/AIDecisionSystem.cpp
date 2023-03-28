@@ -14,7 +14,7 @@ namespace Game {
                     Cell* cell = map->GetCell(x, y);
                     for(int i = 0; i < cell->characterCount; i++){
                         Character* character = cell->characters[i];
-                        if(character->playerControlled || character->target == nullptr)
+                        if(character->playerControlled || character->target == nullptr || character->GetIsDead())
                             continue;
 
                         int targetX = character->target->cellx;
