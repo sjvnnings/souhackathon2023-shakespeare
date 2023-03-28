@@ -8,9 +8,10 @@
 using namespace Game::Map;
 
 Map::Map(int x, int y) {
+    // x and y are the size parameters in the x and y directions on a cartesian plain.
     this->x = x;
     this->y = y;
-    GenerateMap(x, y);
+    GenerateMap(x, y); // calling the generate map function with the given size parameters
 } // end of "Map" constructor
 
 
@@ -25,13 +26,14 @@ int Map::GetY() {
 
 
 void Map::GenerateMap(int x, int y) {
-    map = new Cell [x * y];
+    map = new Cell [x * y]; // creating the map at the size of x * y.
 
+    // iterating through x and y and setting coordinates
     for(int iX = 0; iX < x; iX++){
         for(int iY = 0; iY < y; iY++){
             GetCell(iX, iY)->SetCoords(iX, iY);
-        }
-    }
+        } // end of loop (iY)
+    } // end of loop (iX)
 } // end of "GenerateMap" function
 
 

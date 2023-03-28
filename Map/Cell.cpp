@@ -9,7 +9,7 @@ using namespace Game::Characters;
 
 Cell::Cell() {
 
-}
+} // end of "Cell" constructor
 
 void Cell::AddCharacter(Character *character) {
     if(characterCount == MAX_CHARACTERS)
@@ -19,7 +19,7 @@ void Cell::AddCharacter(Character *character) {
 
     characters[characterCount] = character;
     characterCount++;
-}
+} // end of "AddCharacter" function
 
 void Cell::RemoveCharacter(Character *character) {
     bool has_found_character = false;
@@ -36,11 +36,9 @@ void Cell::RemoveCharacter(Character *character) {
 
     if(has_found_character)
         characterCount--;
-}
+} // end of "RemoveCharacter" function
 
 void Cell::SetCoords(int x, int y) {
     this->x = x;
     this->y = y;
-}
-
-// end of "Cell" constructor
+} // end of "SetCoords" function
