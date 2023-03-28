@@ -11,29 +11,35 @@ void PrintMapCommand::execute(GameManager *gm) {
     int x = gm->GetMap()->GetX();
     int y = gm->GetMap()->GetY();
 
-    for(int column = 0; column < x + 1; column++) {
-        for(int row = 0; row < y + 1; row++) {
-            if(row == 0) {
-                if(column + 1 == y + 1) {
-                   std::cout << "   ";
-                }
-                else if(column + 1 > 9) {
-                    std::cout << column + 1;
-                }
-                else {
-                    std::cout << column + 1 << " ";
-                }
-            }
-            else if(column + 1 == x + 1) {
-                if(row > 9) {
-                    std::cout << row << " ";
-                }
-                else {
-                    std::cout << row << "  ";
-                }
+    for(int row = 0; row < x + 1; row++) {
+        for(int column = 0; column < y + 1; column++) {
+
+            if(row >= 0 && column - 1 >= 0 && gm->GetMap()->GetCell(column - 1, row)->characterCount > 0) {
+                std::cout << " C ";
             }
             else {
-                std::cout << " . ";
+                if(column == 0) {
+                    if(row + 1 == y + 1) {
+                        std::cout << "   ";
+                    }
+                    else if(row + 1 > 9) {
+                        std::cout << row + 1;
+                    }
+                    else {
+                        std::cout << row + 1 << " ";
+                    }
+                }
+                else if(row + 1 == x + 1) {
+                    if(column > 9) {
+                        std::cout << column << " ";
+                    }
+                    else {
+                        std::cout << column << "  ";
+                    }
+                }
+                else {
+                    std::cout << " . ";
+                }
             }
         } // end of loop (i)
         std::cout << std::endl;
