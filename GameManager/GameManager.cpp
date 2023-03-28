@@ -53,7 +53,7 @@ namespace Game {
 
     void GameManager::ExecuteSimulation() {
         for(int i = 0; i < systemCount; i++){
-            systems[i]->execute();
+            systems[i]->execute(map);
         }
     }
 

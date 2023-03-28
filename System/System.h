@@ -5,12 +5,14 @@
 #ifndef SOUHACKATHON2023_SHAKESPEARE_SYSTEM_H
 #define SOUHACKATHON2023_SHAKESPEARE_SYSTEM_H
 
+#include "../Map/Map.h"
+
 namespace Game {
     namespace Systems {
 
         class System {
         public:
-            virtual void execute() = 0;
+            virtual void execute(Game::Map::Map* map) = 0;
         };
 
     } // Game
