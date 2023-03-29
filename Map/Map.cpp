@@ -30,6 +30,7 @@ void Map::GenerateMap(int x, int y) {
     for(int iX = 0; iX < x; iX++){
         for(int iY = 0; iY < y; iY++){
             GetCell(iX, iY)->SetCoords(iX, iY);
+            GetCell(iX, iY)->characterCount = 0;
         }
     }
 } // end of "GenerateMap" function

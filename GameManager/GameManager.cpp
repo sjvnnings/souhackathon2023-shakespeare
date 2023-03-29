@@ -29,7 +29,7 @@ map<string, Command*> commandMap = {
         {"Attack", new AttackCommand}
 };
 
-Character* characters[5] = {
+Character* allCharacters[5] = {
     new Character("Marcus Brutus", "Brutus, Marcus, met his tragic demise."),
         new Character("Gaius Cassius Longinus", "Longinus Cassius met his fateful end."),
         new Character("Servilius Casca", "Casca Servilius met his mortal end."),
@@ -39,6 +39,8 @@ Character* characters[5] = {
 
 namespace Game {
     GameManager::GameManager(int x, int y) {
+        srand(time(NULL));
+
         map = new Map::Map(x, y);
 
         systems = new System*[SYSTEM_COUNT]{
@@ -49,20 +51,46 @@ namespace Game {
 
         systemCount = SYSTEM_COUNT;
 
-        characters = new Character*[MAX_CHARACTERS]{
-            new Character("Julius Caesar", ""),
-            new Character("Brutus", "")
+        //Random number of enemies between 2 and 4.
+        int charCount = rand() % 3 + 2;
+
+        characters = new Character*[charCount + 1]{
+            new Character("Julius Caesar", "")
         };
+
         characters[0]->playerControlled = true;
-
-        map->GetCell(0,0)->AddCharacter(characters[0]);
-        map->GetCell(0, 2)->AddCharacter(characters[1]);
-
-        map->GetCell(0, 6)->isEscape = true;
-
-        characters[1]->target = characters[0];
-
+        map->GetCell(rand() % x, rand() % y)->AddCharacter(characters[0]);
         playerCharacter = characters[0];
+
+        for(int i = 1; i < charCount + 1; i++){
+            Character* character = nullptr;
+
+            //Ensure that randomly selected character is unique (i.e. not already in the characters array.
+            while(character == nullptr) {
+                character = allCharacters[rand() % 5];
+
+                for(int i2 = 1; i2 < i; i2++){
+                    if(character == characters[i2])
+                        character = nullptr;
+                }
+            }
+
+            character->target = characters[0];
+
+            Cell* cell = map->GetCell(rand() % x, rand() % y);
+
+            while(cell->characterCount != 0)
+                cell = map->GetCell(rand() % x, rand() % y);
+
+            cell->AddCharacter(character);
+            characters[i] = character;
+        }
+
+        Cell* exitCell = map->GetCell(rand() % x, rand() % y);
+        while(exitCell->characterCount != 0)
+            exitCell = map->GetCell(rand() % x, rand() % y);
+
+        exitCell->isEscape = true;
 
         characterCount = 1;
     }
