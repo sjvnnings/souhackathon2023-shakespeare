@@ -9,9 +9,11 @@
 
 namespace Game {
     class AttackCommand : public Command {
+    private:
+        bool wasSuccess = false;
     public:
         void execute(Game::GameManager* gm) override;
-        bool IsHelper() override { return false; }
+        bool IsHelper() override { return !wasSuccess; }
     };
 } // Game
 
