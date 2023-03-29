@@ -29,7 +29,7 @@ namespace Game {
         wasSuccess = canAttack;
 
         if(!canAttack){
-            std::cout << "Nobody to attack!" << std::endl;
+            std::cout << "There is no one to attack or blame!" << std::endl;
         }
     } // end of "execute" function
 } // Game
