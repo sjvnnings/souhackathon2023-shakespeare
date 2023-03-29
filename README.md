@@ -1,6 +1,6 @@
 # Southern Oregon University Hackathon 2023 Submission
 
-Authors: Samuel Jennings & Brayden Edwards
+Authors: Samuel Jennings (sjvnnings) & Brayden Edwards (BraydenJamesE)
 
 
 ### Information
